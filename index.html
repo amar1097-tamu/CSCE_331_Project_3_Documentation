@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="default no-touch" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project Documentation</title>
+
+    <!-- Update path if assets are stored in server/ instead -->
+    <link rel="stylesheet" href="client/assets/style.css">
+    <link rel="stylesheet" href="client/assets/highlight.css">
+
+    <style>
+        .typedoc-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .module-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .module-card {
+            border-radius: 8px;
+            padding: 1.2rem 1.4rem;
+            background: var(--color-background-secondary);
+            border: 1px solid var(--color-sidebar-border);
+            transition: background 0.2s, border 0.2s;
+        }
+
+        .module-card:hover {
+            background: var(--color-background-hover);
+            border-color: var(--color-accent);
+        }
+
+        .module-card h2 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            font-size: 1.25rem;
+        }
+
+        a.module-card-link {
+            text-decoration: none;
+            color: var(--color-text);
+        }
+
+        pre, code {
+            background: var(--color-background-secondary);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+            <div class="typedoc-container">
+
+                <h1>CSCE 331 Project 3 — Group 2</h1>
+                <p>A Panda Express POS System web application built with a React frontend and Node/Express backend.</p>
+
+                <h2>Documentation Modules</h2>
+
+                <div class="module-cards">
+                    <a class="module-card-link" href="client/index.html">
+                        <div class="module-card">
+                            <h2>Client Documentation</h2>
+                            <p>React frontend (Vite + TypeScript)</p>
+                        </div>
+                    </a>
+
+                    <a class="module-card-link" href="server/index.html">
+                        <div class="module-card">
+                            <h2>Server Documentation</h2>
+                            <p>Node.js + Express backend</p>
+                        </div>
+                    </a>
+                </div>
+
+                <hr />
+
+                <h2>Project Structure</h2>
+
+                <ul>
+                    <li><strong>client/</strong> — React frontend built with Vite and TypeScript</li>
+                    <li><strong>server/</strong> — Node.js/Express backend</li>
+                </ul>
+
+                <h2>Prerequisites</h2>
+                <ul>
+                    <li>Node.js (v14 or higher)</li>
+                    <li>npm (comes with Node.js)</li>
+                </ul>
+
+                <h2>Installation</h2>
+
+                <h3>Install Frontend Dependencies</h3>
+                <pre><code>cd client
+npm install</code></pre>
+
+                <h3>Install Backend Dependencies</h3>
+                <pre><code>cd server
+npm install</code></pre>
+
+                <h2>Running the Application</h2>
+
+                <h3>Start the Backend Server</h3>
+                <pre><code>cd server
+npm run dev</code></pre>
+                <p>The backend server runs on <strong>port 3001</strong> by default.</p>
+
+                <h3>Start the Frontend Server</h3>
+                <pre><code>cd client
+npm run dev</code></pre>
+                <p>The frontend runs at: <strong>http://localhost:5173</strong></p>
+
+                <h2>Development Notes</h2>
+                <ul>
+                    <li>Both servers must run simultaneously for full functionality.</li>
+                    <li>Start the backend before the frontend.</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="client/assets/main.js"></script>
+</body>
+</html>
